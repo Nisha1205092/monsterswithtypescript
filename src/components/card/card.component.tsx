@@ -1,7 +1,10 @@
-import React from 'react';
 import './card.styles.css';
+import { Monster } from '../../App';
 
-export const Card = ({ monster }) => {
+type CardProps = {
+	monster: Monster;
+}
+export const Card = ({ monster }: CardProps) => {
 	return (
 		<div className='card-container'>
 			<img alt="monster" src={`https://robohash.org/${monster.id}?set=set2&size=180x180`}/>
